@@ -9,7 +9,7 @@ Created on Fri Apr 16 17:38:18 2021
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
-
+import os as os
 
 # Function to plot the solution
 def plot(x_list, y_list, funcLambdify, barTitle, nContourLines = 29, colorBarFormat = "%.f", plotTitle=None):
@@ -41,9 +41,7 @@ def plot(x_list, y_list, funcLambdify, barTitle, nContourLines = 29, colorBarFor
     plt.rc('text', usetex=False)
     plt.rc('font', family='serif')
     plt.rcParams["figure.figsize"] = (8,6)
-    plt.rcParams['axes.linewidth'] = lineWidth
-    plt.rcParams['axes.titlepad'] = 30 
-        
+    plt.rcParams['axes.linewidth'] = lineWidth        
     
     
     fig,ax=plt.subplots(1,1)
@@ -81,18 +79,20 @@ def plot(x_list, y_list, funcLambdify, barTitle, nContourLines = 29, colorBarFor
     plt.ylabel("y [m]", fontsize=fontSize+4)
     plt.yticks(fontsize = fontSize+2)
     plt.xticks(fontsize = fontSize+2)
-    plt.grid(b=True, which='major', color='#666666', linestyle='-')
-    # plt.minorticks_on()
-    plt.grid(b=True, which='minor', color='#999999', linestyle='-', alpha=0.2)
+    plt.grid(visible=True, which='major', color='black', linestyle='-')
+    plt.minorticks_on()
+    plt.grid(visible=True, which='minor', color='darkgrey', linestyle='--', alpha=0.5)
+    plt.tight_layout()
     
 
-    # # Add logo
-    # logo = Image.open('Logo/logo.png')
-    # newax = fig.add_axes([0.84, 0.01, 0.15, 0.15], anchor='NE', zorder=-1)
-    # newax.imshow(logo, alpha=0.2)
-    # newax.axis('off')
-    # plt.subplots_adjust(left=0.075, bottom=0.15, right=0.95, top=0.95)
+    # Add logo
+    logoPath = 'pyMMSFoam/Logo/logo.png'
+    logo = Image.open(logoPath)
+    newax = fig.add_axes([0.84, 0.01, 0.15, 0.15], anchor='NE', zorder=-1)
+    newax.imshow(logo, alpha=0.2)
+    newax.axis('off')
+    plt.subplots_adjust(left=0.075, bottom=0.15, right=0.95, top=0.95)
 
-    # plt.show()
+    plt.show()
     
 
