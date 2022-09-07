@@ -23,8 +23,16 @@ DT = 1e-3
 
 S_T = mms.ddt(T) - mms.laplacian(T, DT)
 
+
+# # Uncomment what is needed
+
+# # Generate fvOptions
 # mms.generateFvOptions(S_T, "sourceTerm", "T")
-mms.generateDirichletBoundaries(T, "T")
+
+# # Generate boundary conditions
+# mms.generateDirichletBoundaries(T, "T")
 # mms.generateNeumannBoundaries(T, "T")
+
+# # Generate functionObjects
 # mms.generateFunctionObject(T, "T")
                        

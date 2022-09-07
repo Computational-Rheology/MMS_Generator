@@ -28,18 +28,20 @@ R = nu*(mms.grad(U) + mms.grad(U).T)
 
 S = mms.div(U*U.T) - mms.div(R) + mms.grad(p)
 
-# Generate fvOptions
-mms.generateFvOptions(S, "momentumSource", "U")
+# # Uncomment what is needed
 
-# Generate boundary conditions
-# Velocity
-mms.generateDirichletBoundaries(U, "U")
-mms.generateNeumannBoundaries(U, "U")
+# # Generate fvOptions
+# mms.generateFvOptions(S, "momentumSource", "U")
 
-# Pressure
-mms.generateDirichletBoundaries(p, "p")
-mms.generateNeumannBoundaries(p, "p")
+# # Generate boundary conditions
+# # Velocity
+# mms.generateDirichletBoundaries(U, "U")
+# mms.generateNeumannBoundaries(U, "U")
 
-#Generate functionObjects
-mms.generateFunctionObject(U, "U")
-mms.generateFunctionObject(p, "p")
+# # Pressure
+# mms.generateDirichletBoundaries(p, "p")
+# mms.generateNeumannBoundaries(p, "p")
+
+# # Generate functionObjects
+# mms.generateFunctionObject(U, "U")
+# mms.generateFunctionObject(p, "p")
