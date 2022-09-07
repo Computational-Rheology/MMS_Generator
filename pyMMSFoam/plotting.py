@@ -9,7 +9,6 @@ Created on Fri Apr 16 17:38:18 2021
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
-import os as os
 
 # Function to plot the solution
 def plot(x_list, y_list, funcLambdify, barTitle, nContourLines = 29, colorBarFormat = "%.f", plotTitle=None):

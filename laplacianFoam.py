@@ -6,13 +6,14 @@ Created on Fri Apr 16 17:38:18 2021
 @author: pc
 """
 
-from sympy import cos
-from pyMMSFoam import x,y,z,t
-
 import numpy as np
 import sympy as sym
+from sympy import cos
 
 import pyMMSFoam as mms
+from pyMMSFoam import x,y,z,t
+
+
 # LaplacianFoam
 T = 150*(cos(x*x + y*y + 0.1*t) + 1.5) # Unsteady 2D
 # T = 150*(cos(x*x + y*y ) + 1.5) # Steady 2D
