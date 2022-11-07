@@ -3,7 +3,9 @@
 """
 Created on Fri Apr 16 17:38:18 2021
 
-@author: pc
+@author: Bruno Ramoa
+@affiliation: Institute for Polymers and Composites, University of Minho, Portugal
+
 """
 
 import sympy as sym
