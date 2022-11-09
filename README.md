@@ -12,7 +12,7 @@ _pyMMSFOAM_ is based on [Sympy](https://www.sympy.org/en/index.html) and is comp
         * Laplacian,  $\nabla \left(\Gamma \nabla \cdot \right)$
         * If required other operators can be easily implemented in _pyMMSFOAM_.
 * Printing utilities:
-    * Is responsible for printing the source terms resulting from the method of manufactured solutions, suitable _boundary conditions_ (fixed value or fixed gradient) as well as _functionObjects_ for computing several common error norms ($L^1$, $L^2$, $L^\infty$).
+    * Is responsible for printing the source terms resulting from the method of manufactured solutions, suitable _boundary conditions_ (fixed value or fixed gradient) as well as _functionObjects_ for computing several common error norms ( $L^1$, $L^2$, $L^\infty$).
     * The output should be copied into the respective case study locations.
 
 This repository is associated to a paper published in the OpenFOAM Journal [1], which describes the case studies named _laplacianFoam.py_ and _simpleFoam.py_, and should provide suitable tutorials for using the python utility.
